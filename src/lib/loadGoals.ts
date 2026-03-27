@@ -21,16 +21,15 @@ const categoryNames: Record<number, string> = {
     11: "Security",
 };
 
-// Eager load all goals at import time for instant rendering
+// Eager load all goals from the root learning_goals/ folder
 const goalModules = import.meta.glob<{ default: LearningGoalData }>(
-    "../content/*/*/goal.json",
+    "../../learning_goals/*/*/goal.json",
     { eager: true }
 );
 
 // Load evidence modules with metadata (frontmatter is exported as `metadata`)
-// When using import: "metadata", the value IS the metadata object (or undefined)
 const evidenceMetadata = import.meta.glob<{ visible?: boolean }>(
-    "../content/*/*/evidence.svx",
+    "../../learning_goals/*/*/evidence.svx",
     {
         eager: true,
         import: "metadata",
@@ -40,7 +39,7 @@ const evidenceMetadata = import.meta.glob<{ visible?: boolean }>(
 // Lazy load evidence modules for rendering
 const evidenceModulesGlob = import.meta.glob<{
     default: Component;
-}>("../content/*/*/evidence.svx");
+}>("../../learning_goals/*/*/evidence.svx");
 
 // Map goal number (e.g. "1.1") to the actual glob path (the key)
 const evidencePathLookup: Record<string, string> = {};
@@ -59,7 +58,6 @@ function hasRealEvidence(goalNumber: string): boolean {
 
     const metadata = evidenceMetadata[modulePath];
     // If no metadata or visible is not explicitly false, consider it real evidence
-    // Templates have `visible: false` in their frontmatter
     return metadata?.visible !== false;
 }
 
@@ -68,9 +66,9 @@ export function loadAllGoals(): Category[] {
 
     let verificationData: Record<string, string> = {};
     try {
-        // Dynamic import logic using eager raw for jsonc to integrate easily
+        // VERIFICATION.jsonc is in the root
         const verifications = import.meta.glob(
-            "./VERIFICATION.jsonc",
+            "../../VERIFICATION.jsonc",
             { query: '?raw', import: 'default', eager: true }
         );
         for (const [key, rawContent] of Object.entries(verifications)) {
@@ -84,7 +82,7 @@ export function loadAllGoals(): Category[] {
 
     for (const [path, module] of Object.entries(goalModules)) {
         const goalData = module.default;
-        // Path format: ../content/{category}/{goalNumber}/goal.json
+        // Path format: ../../learning_goals/{category}/{goalNumber}/goal.json
         const pathMatch = path.match(/\/(\d+)\/(\d+\.\d+)\/goal\.json$/);
         if (!pathMatch) continue;
 
@@ -92,11 +90,11 @@ export function loadAllGoals(): Category[] {
         const goalNumber = pathMatch[2];
 
         // Override verified status if present in VERIFICATION.jsonc
-        let verifiedName = goalData.verified;
+        let verifiedName = "";
         let goalStatus = goalData.status;
 
         if (verificationData[goalNumber] && verificationData[goalNumber].trim() !== "") {
-            verifiedName = verificationData[goalNumber].split("//")[0].trim();
+            verifiedName = verificationData[goalNumber].trim();
             goalStatus = "Verified";
         }
 

@@ -7,7 +7,6 @@ export interface LearningGoalData {
     title: string;
     track: Track[];
     status: Status;
-    verified: string;
     project: string[];
 }
 
@@ -16,6 +15,7 @@ export interface LearningGoal extends LearningGoalData {
     categoryNumber: number;
     evidencePath: string;
     hasEvidence: boolean;
+    verified: string;
 }
 
 export interface Category {

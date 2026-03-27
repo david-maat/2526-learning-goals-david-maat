@@ -25,7 +25,7 @@
     }
 
     function getColor() {
-        if (goal.verified !== "") {
+        if (goal.verified) {
             return "bg-blue-100";
         } else if (goal.status == "Done") {
             return "bg-emerald-100";
