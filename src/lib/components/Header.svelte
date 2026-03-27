@@ -1,5 +1,6 @@
 <script lang="ts">
     import type { Snippet } from "svelte";
+    import { user } from "$lib/user.svelte";
 
     interface Props {
         children: Snippet;
@@ -11,7 +12,7 @@
 <header class="header">
     <div class="header-content">
         <div class="title-block">
-            <h1>Sem Van Broekhoven</h1>
+            <h1>{user}</h1>
             <div class="accent-line"></div>
         </div>
         <p class="subtitle">Learning Goals Portfolio</p>

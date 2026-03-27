@@ -1,0 +1,1 @@
+export const user = "What's my name?";
