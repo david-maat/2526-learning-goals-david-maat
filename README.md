@@ -219,6 +219,11 @@ go to `src/lib/user.svelte.ts` and edit the `user` variable.
 
 ## Local development
 
+You can either use npm or pnpm (pnpm is superior)
+Install npm if you haven't already ->
+[RTFM](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+
+(if you want to use pnpm)
 Install pnpm if you haven't already ->
 [RTFM](https://pnpm.io/installation)
 
@@ -227,6 +232,8 @@ Install pnpm if you haven't already ->
 First you need to install the dependencies.
 
 ```bash
+npm install
+# or
 pnpm install
 ```
 
@@ -235,6 +242,8 @@ pnpm install
 To run the website locally, you can use the following command:
 
 ```bash
+npm run dev
+# or
 pnpm dev
 ```
 
