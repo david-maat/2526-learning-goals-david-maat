@@ -11,5 +11,5 @@ I acomplished this during the Software Modelling & Design course.
 
 ## Files
 
-<Image src="./assets/examresults.png" alt="" caption="" /> 
+<Image src="examresults.png" alt="" caption="" /> 
 
