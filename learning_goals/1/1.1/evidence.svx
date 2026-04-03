@@ -7,7 +7,7 @@ visible: false
 
 ## Project Description
 
-your project description here
+your project description here - test
 
 ## Duration of the Project
 
