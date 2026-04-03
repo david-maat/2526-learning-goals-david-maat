@@ -44,25 +44,24 @@
                 "type": "string",
                 "enum": [
                     // Opleidings onderdelen
-                    "OPO SKILL2",
-                    "OPO SKILL3",
+                    "OPO SKIL2",
+                    "OPO SKIL3",
                     "OPO 2APP-AI SM&D",
-                    "OPO 2APP-AI AI",
+                    "OPO 2APP-AI React & .NET Development",
                     "OPO 3APP RZL",
-                    "OPO 3APP UI/UX",
                     "OPO 2CCS Linux Web Services",
                     // DI related
                     "Tech talks",
-                    "Belevingsdag",
                     "Portfolio",
                     "General DI",
                     // DI projects
-                    "2526-MOBI-027-Database-design",
-                    "2526-DI-004-Stratego",
-                    "2526-waai-001-waaiburg-mobile-app",
-                    "2526-TE-001-Art-website",
-                    "2526-MOBI-016-I-m-in-tales-project",
-                    "2526-THEM-003-Meshcore-Tracker"
+                    "2526-MPI-001-Employment-Interest-Tool",
+                    "2526-TMEM-001-Ticketing-system-for-repair-café",
+                    "2526-OLP-003-OpenTholoMetri-Simple-turbidity-measurement",
+                    "2526-DI0-035-Frank-the-speaking-bench",
+                    "2526-DI-034-DI4D-Portal",
+                    "2526-UAnt-007-Arcade-cabinet",
+                    "2526-JC-Backend-WASM"
                 ]
             }
         }
