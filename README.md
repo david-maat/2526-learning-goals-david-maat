@@ -113,8 +113,8 @@ In this schema you can add projects
 
 common projects:
 - OPO 2APP-AI SM&D
-- OPO SKILL2
-- OPO SKILL3
+- OPO SKIL2
+- OPO SKIL3
 
 You can also add your own projects. For example:
 - 2627-NASA-001-hacking-nasa-infrastructure
