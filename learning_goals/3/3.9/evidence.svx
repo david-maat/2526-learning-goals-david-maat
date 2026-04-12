@@ -1,28 +1,21 @@
 ---
-visible: false
+visible: true
 ---
 <script> 
     import { Image, Video, Pdf } from "$lib/components/evidence"; 
 </script> 
 
-## Project Description
+## Explanation
 
-your project description here
-
-## Duration of the Project
-
-the project duration here
-
-## Accomplished Learning Goals
-
-the learning goals here
+In the DI4D we worked with figma first to create a natural and intuitive user expierence. 
+We made a lofi design first and preformed an analysis of it based on the 10 heuristics of Nielsen, 
+after which we made a hifi design. Throughout the process we involved the client to cross check 
+our design with the clients needs.
 
 ## Links
 
-<a href="https://github.com/Thomas-More-Digital-Innovation/" target="_blank">link to the project</a>
+<a href="https://github.com/Thomas-More-Digital-Innovation/2526-DI-034-DI4D-Portal" target="_blank">link to the project</a>
 
-## Files
+## Figma screenshot
 
-<Image src="image.png" alt="" caption="" /> 
-<Video src="video.mp4" caption="" /> 
-<Pdf src="document.pdf" title="" />
+<Image src="evidence.png" alt="" caption="" /> 

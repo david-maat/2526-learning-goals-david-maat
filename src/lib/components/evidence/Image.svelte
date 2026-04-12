@@ -15,7 +15,8 @@
         | undefined;
 
     let resolvedSrc = $derived.by(() => {
-        if (!context || src.includes("/") || src.includes("\\")) return src;
+        if (!context) return src;
+        if (src.startsWith("http://") || src.startsWith("https://")) return src;
 
         const resolved = resolveAssetPath(
             context.categoryNumber,

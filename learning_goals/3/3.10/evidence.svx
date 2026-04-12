@@ -1,28 +1,20 @@
 ---
-visible: false
+visible: true
 ---
 <script> 
     import { Image, Video, Pdf } from "$lib/components/evidence"; 
 </script> 
 
-## Project Description
+## Explanation
 
-your project description here
-
-## Duration of the Project
-
-the project duration here
-
-## Accomplished Learning Goals
-
-the learning goals here
+In the DI4D project we worked with figma. We used components to make a consistent design. 
+We performed an analysis of our design to make sure we implemented all of Nielsen's 10 heuristics. 
+We made sure to guide the user in right direction of the normal flow. 
 
 ## Links
 
-<a href="https://github.com/Thomas-More-Digital-Innovation/" target="_blank">link to the project</a>
+<a href="https://github.com/Thomas-More-Digital-Innovation/2526-DI-034-DI4D-Portal" target="_blank">link to the project</a>
 
-## Files
+## Figma screenshot
 
-<Image src="image.png" alt="" caption="" /> 
-<Video src="video.mp4" caption="" /> 
-<Pdf src="document.pdf" title="" />
+<Image src="evidence.png" alt="" caption="" /> 

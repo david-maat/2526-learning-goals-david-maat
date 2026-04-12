@@ -1,28 +1,28 @@
 ---
-visible: false
+visible: true
 ---
 <script> 
     import { Image, Video, Pdf } from "$lib/components/evidence"; 
 </script> 
 
-## Project Description
+## Evidence
 
-your project description here
+In all these projects tailwind was used to create responsive interfaces.
 
-## Duration of the Project
+## [MPI-001-Employment-Interest-Tool](https://github.com/Thomas-More-Digital-Innovation/2526-MPI-001-Employment-Interest-Tool)
+|  |  |
+| --- | --- |
+| <Image src="./mpi/desktop.png" alt="MPI-001" /> | <Image src="./mpi/mobile.png" alt="MPI-001" /> |
 
-the project duration here
 
-## Accomplished Learning Goals
+## [UAnt-007-Arcade-cabinet](https://github.com/Thomas-More-Digital-Innovation/2526-UAnt-007-Arcade-cabinet)
 
-the learning goals here
+<Image src="./ua/image.png" alt="UAnt-007" />
 
-## Links
+## [TMEM-001-Ticketing-system-for-repair-café](https://github.com/Thomas-More-Digital-Innovation/2526-TMEM-001-Ticketing-system-for-repair-café)
 
-<a href="https://github.com/Thomas-More-Digital-Innovation/" target="_blank">link to the project</a>
+|  |  |  |  |
+| --- | --- | --- | --- |
+| <Image src="./repaircafe/1.png" alt="TMEM-001" /> | <Image src="./repaircafe/2.png" alt="TMEM-001" /> | <Image src="./repaircafe/3.png" alt="TMEM-001" /> | <Image src="./repaircafe/4.png" alt="TMEM-001" /> |
 
-## Files
-
-<Image src="image.png" alt="" caption="" /> 
-<Video src="video.mp4" caption="" /> 
-<Pdf src="document.pdf" title="" />
+<Image src="repaircafe/image.png" alt="" />
