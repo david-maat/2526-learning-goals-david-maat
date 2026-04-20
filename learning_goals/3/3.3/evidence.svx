@@ -1,28 +1,14 @@
 ---
-visible: false
+visible: true
 ---
 <script> 
     import { Image, Video, Pdf } from "$lib/components/evidence"; 
 </script> 
 
-## Project Description
+## Explanation 
 
-your project description here
+For the RepairCafé I worked with next.js where the frontend and backend are integrated in one project. 
 
-## Duration of the Project
+## Link 
 
-the project duration here
-
-## Accomplished Learning Goals
-
-the learning goals here
-
-## Links
-
-<a href="https://github.com/Thomas-More-Digital-Innovation/" target="_blank">link to the project</a>
-
-## Files
-
-<Image src="image.png" alt="" caption="" /> 
-<Video src="video.mp4" caption="" /> 
-<Pdf src="document.pdf" title="" />
+<a href="https://github.com/Thomas-More-Digital-Innovation/2526-TMEM-001-Ticketing-system-for-repair-cafe" target="_blank">GitHub Repository</a>

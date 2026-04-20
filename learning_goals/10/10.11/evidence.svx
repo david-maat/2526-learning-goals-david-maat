@@ -1,28 +1,15 @@
 ---
-visible: false
+visible: true
 ---
 <script> 
     import { Image, Video, Pdf } from "$lib/components/evidence"; 
 </script> 
 
-## Project Description
+## Explanation
 
-your project description here
-
-## Duration of the Project
-
-the project duration here
-
-## Accomplished Learning Goals
-
-the learning goals here
+For the UA arcade cabinet I built a simple frontend and api that I used in a first meeting as a PoC 
+to show that we had understood the requirements laid out by the client.
 
 ## Links
 
-<a href="https://github.com/Thomas-More-Digital-Innovation/" target="_blank">link to the project</a>
-
-## Files
-
-<Image src="image.png" alt="" caption="" /> 
-<Video src="video.mp4" caption="" /> 
-<Pdf src="document.pdf" title="" />
+<a href="https://github.com/Thomas-More-Digital-Innovation/2526-UAnt-007-Arcade-cabinet" target="_blank">link to the project</a>

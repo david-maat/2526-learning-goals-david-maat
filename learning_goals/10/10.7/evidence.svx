@@ -1,28 +1,14 @@
 ---
-visible: false
+visible: true
 ---
 <script> 
     import { Image, Video, Pdf } from "$lib/components/evidence"; 
 </script> 
 
-## Project Description
+## Explanation
 
-your project description here
-
-## Duration of the Project
-
-the project duration here
-
-## Accomplished Learning Goals
-
-the learning goals here
+For Frank the speaking bench I debugged a memory leak in the voice recognition system, which caused the system to crash after about a day of uptime. I had to prioritize the part of the system I wanted to improve, as there was not enough time to refactor everything.
 
 ## Links
 
-<a href="https://github.com/Thomas-More-Digital-Innovation/" target="_blank">link to the project</a>
-
-## Files
-
-<Image src="image.png" alt="" caption="" /> 
-<Video src="video.mp4" caption="" /> 
-<Pdf src="document.pdf" title="" />
+<a href="https://github.com/Thomas-More-Digital-Innovation/2526-DI0-035-Frank-the-speaking-bench" target="_blank">link to the project</a>

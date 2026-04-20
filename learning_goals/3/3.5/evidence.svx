@@ -1,28 +1,20 @@
 ---
-visible: false
+visible: true
 ---
 <script> 
     import { Image, Video, Pdf } from "$lib/components/evidence"; 
 </script> 
 
-## Project Description
+## Explanation
 
-your project description here
-
-## Duration of the Project
-
-the project duration here
-
-## Accomplished Learning Goals
-
-the learning goals here
+For the JC WASM project I worked with GO to serve an api that commucates with a database. 
+For the employment interest tool I implemented server side events to build an interactive expierience for the client.
+For the UA arcade cabinet I implemented an API that serves game files with dynamic replacement of assets to allow replacing the original game assets with custom ones. 
+This was implemented in FastAPI (python)
 
 ## Links
 
-<a href="https://github.com/Thomas-More-Digital-Innovation/" target="_blank">link to the project</a>
+<a href="https://github.com/Thomas-More-Digital-Innovation/2526-JC-002-Backend-WASM" target="_blank">JC-WASM Repository</a><br />
+<a href="https://github.com/Thomas-More-Digital-Innovation/2526-MPI-001-Employment-Interest-Tool" target="_blank">Employment Interest Tool Repository</a><br />
+<a href="https://github.com/Thomas-More-Digital-Innovation/2526-UAnt-007-Arcade-cabinet" target="_blank">UA Arcade Cabinet Repository</a><br />
 
-## Files
-
-<Image src="image.png" alt="" caption="" /> 
-<Video src="video.mp4" caption="" /> 
-<Pdf src="document.pdf" title="" />

@@ -1,28 +1,19 @@
 ---
-visible: false
+visible: true
 ---
 <script> 
     import { Image, Video, Pdf } from "$lib/components/evidence"; 
 </script> 
 
-## Project Description
+## Explanation
 
-your project description here
-
-## Duration of the Project
-
-the project duration here
-
-## Accomplished Learning Goals
-
-the learning goals here
+For the DI4D portal I made the deployments to kubernetes where postgres, collabora and the webserver itself are running in separate pods.
+This makes it easy to scale the different components independently according to the current load.
+The file browser uses the S3 API so the webserver doesn't need to have direct local filesystem access, 
+improving the scalability of the application.
 
 ## Links
 
-<a href="https://github.com/Thomas-More-Digital-Innovation/" target="_blank">link to the project</a>
+<a href="https://github.com/Thomas-More-Digital-Innovation/2526-DI-034-DI4D-Portal" target="_blank">link to the project</a>
 
-## Files
 
-<Image src="image.png" alt="" caption="" /> 
-<Video src="video.mp4" caption="" /> 
-<Pdf src="document.pdf" title="" />
