@@ -17,4 +17,6 @@ were correct and this has led to a good final result, which was smooth to implem
 
 ## Files
 
-TODO: add design documents
+<Image src="DI4D-ERD.png" alt="DI4D" />
+<Image src="DI4D-UCD.png" alt="DI4D" />
+<Pdf src="Flow.pdf" alt="DI4D" />
