@@ -1,25 +1,22 @@
 ---
-visible: false
+visible: true
 ---
 <script> 
     import { Image, Video, Pdf } from "$lib/components/evidence"; 
 </script> 
 
-## Project Description
+## Explanation
 
-your project description here
-
-## Duration of the Project
-
-the project duration here
-
-## Accomplished Learning Goals
-
-the learning goals here
+During the More Professional week, we were given the assignment to come up with a solution, 
+taking into account an IT/technology improvement to enhance agriculture in East Africa.
+For this project I developed a prototype of a sensor that can be used to measure the temperature and humidity of soil.
+It sends the data over LoRa (MeshCore) to a gateway, which publishes the data to a MQTT broker. 
+The data can then be visualized in a dashboard, which was developed by the team also developed.
+This data can then be used to provide more accurate advice to farmers in th area.
 
 ## Links
 
-<a href="https://github.com/Thomas-More-Digital-Innovation/" target="_blank">link to the project</a>
+<a href="https://github.com/david-maat/MORE-PROFESSIONAL-WEEK" target="_blank">link to the project</a>
 
 ## Files
 
