@@ -8,18 +8,28 @@ visible: true
 ## Evidence
 
 In all these projects tailwind was used to create responsive interfaces.
+<h2>
+    <a href="https://github.com/Thomas-More-Digital-Innovation/2526-MPI-001-Employment-Interest-Tool" target="_blank">
+    MPI-001-Employment-Interest-Tool
+    </a>
+</h2>
 
-## [MPI-001-Employment-Interest-Tool](https://github.com/Thomas-More-Digital-Innovation/2526-MPI-001-Employment-Interest-Tool)
 |  |  |
 | --- | --- |
 | <Image src="./mpi/desktop.png" alt="MPI-001" /> | <Image src="./mpi/mobile.png" alt="MPI-001" /> |
 
-
-## [UAnt-007-Arcade-cabinet](https://github.com/Thomas-More-Digital-Innovation/2526-UAnt-007-Arcade-cabinet)
+<h2>
+    <a href="https://github.com/Thomas-More-Digital-Innovation/2526-UAnt-007-Arcade-cabinet" target="_blank">
+    UAnt-007-Arcade-cabinet
+    </a>
+</h2>
 
 <Image src="./ua/image.png" alt="UAnt-007" />
-
-## [TMEM-001-Ticketing-system-for-repair-café](https://github.com/Thomas-More-Digital-Innovation/2526-TMEM-001-Ticketing-system-for-repair-café)
+<h2>
+    <a href="https://github.com/Thomas-More-Digital-Innovation/2526-TMEM-001-Ticketing-system-for-repair-cafe" target="_blank">
+    TMEM-001-Ticketing-system-for-repair-café
+    </a>
+</h2>
 
 |  |  |  |  |
 | --- | --- | --- | --- |

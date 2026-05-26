@@ -7,7 +7,39 @@ visible: true
 
 ## Explanation 
 
-For the RepairCafé I worked with next.js where the frontend and backend are integrated in one project. 
+For the RepairCafé ticketing system, I developed a full-stack web application using Next.js, Prisma, and PostgreSQL. The frontend, backend, and database layers are integrated within a single, cohesive codebase. 
+
+An example of this cohesive integration is the process of registering a new item (voorwerp) for repair:
+
+### 1. Frontend Layer (React & Next.js Client Components)
+The user interface is built with React client components and styled using Tailwind CSS. In the registration form at [app/counter/register/page.tsx](https://github.com/Thomas-More-Digital-Innovation/2526-TMEM-001-Ticketing-system-for-repair-cafe/blob/main/code/rc-app/app/counter/register/page.tsx), user input is captured via interactive form fields and submitted directly to a Next.js Server Action:
+
+```tsx
+const result = await registerVoorwerp(payload);
+```
+
+### 2. Backend Layer (Next.js Server Actions)
+The backend logic is implemented as secure Server Actions marked with the `'use server'` directive. In [lib/actions/voorwerpen.ts](https://github.com/Thomas-More-Digital-Innovation/2526-TMEM-001-Ticketing-system-for-repair-cafe/blob/main/code/rc-app/lib/actions/voorwerpen.ts), the `registerVoorwerp` function performs server-side validations, validates user sessions, handles business logic (such as checking for an active day and generating a unique tracking number), and initiates database operations.
+
+### 3. Database Layer (PostgreSQL & Prisma ORM)
+The database schema is defined in [prisma/schema.prisma](https://github.com/Thomas-More-Digital-Innovation/2526-TMEM-001-Ticketing-system-for-repair-cafe/blob/main/code/rc-app/prisma/schema.prisma) with relations between models like `Gebruiker`, `Klant` (Client), `Voorwerp` (Item), and `Cafedag`. The Server Action interacts with the PostgreSQL database using Prisma Client:
+
+```typescript
+const created = await prisma.voorwerp.create({
+  data: {
+    volgnummer,
+    klantId: klant.klantId,
+    aanmeldingsDatum: now,
+    aanmeldingsTijd: now,
+    voorwerpStatusId: geregistreerdStatus.voorwerpStatusId,
+    afdelingId: afdelingId,
+    voorwerpBeschrijving: data.itemDescription,
+    klachtBeschrijving: data.problemDescription,
+  },
+})
+```
+
+---
 
 ## Link 
 
