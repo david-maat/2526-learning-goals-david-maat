@@ -104,7 +104,7 @@
     .modal-content {
         position: relative;
         width: 91.666667%;
-        max-width: 56rem;
+        max-width: 86rem;
         max-height: 80vh;
         display: flex;
         flex-direction: column;

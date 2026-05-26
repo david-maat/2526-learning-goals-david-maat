@@ -1,28 +1,27 @@
 ---
-visible: false
+visible: true
 ---
 <script> 
     import { Image, Video, Pdf } from "$lib/components/evidence"; 
 </script> 
 
-## Project Description
+## Defence
 
-your project description here
+Presenting ideas, designs, and code to different stakeholders is a core skill I have developed during my Digital Innovation studies. I have learned to adapt my communication style depending on whether I am presenting to coaches, peers, or external clients.
 
-## Duration of the Project
+### Pitching at the Blended Intensive Programme (BIP)
+The ultimate test of my presentation skills was during the BIP pitch competition in Austria. Our team designed an AI-driven solution for customer support, which we had to pitch to a jury composed of lecturers. 
+- **Audience-Centric Pitching:** The jury was focused on business viability, user impact, and innovation. Instead of overwhelming them with technical AI architecture details, we focused on the business case, user flows, and how our solution solves a real-world problem.
+- **Narrative and Visual Structure:** I collaborated on drafting and designing our pitch deck, ensuring a clean, engaging visual narrative. We structured the slides to clearly define the problem, our solution, the underlying business model, and a live user scenario.
+- **Dynamic Presenting:** During the actual pitch, we divided the presentation duties dynamically to maintain high energy and engagement. Presenting to an international audience under time constraints pushed me to speak clearly, maintain eye contact, and present our solution with conviction, resulting in positive feedback from the jury.
 
-the project duration here
-
-## Accomplished Learning Goals
-
-the learning goals here
-
-## Links
-
-<a href="https://github.com/Thomas-More-Digital-Innovation/" target="_blank">link to the project</a>
+### Regular Project Demos and Showcases
+Beyond the BIP, the Digital Innovation curriculum requires regular project reviews and demos. When demonstrating technical progress (such as database integrations or UI components) to coaches and peers, I tailor my presentation to focus on technical implementation details, challenges faced, and design decisions. Conversely, when showing prototypes to end-users or clients, I focus on UX usability, simplicity, and value, ensuring that the target audience gets the exact information they need to provide useful feedback.
 
 ## Files
+<Pdf src="Pitch-deck-BIP.pdf" title="Pitch slides" />
 
-<Image src="image.png" alt="" caption="" /> 
-<Video src="video.mp4" caption="" /> 
-<Pdf src="document.pdf" title="" />
+<div class="grid grid-cols-2 gap-4"> 
+    <Image src="pitching.jpeg" alt="Pitching presentation" title="Pitching" />
+    <Image src="case-work.png" alt="Working on the case together" title="Working on the case" />
+</div>

@@ -1,28 +1,31 @@
 ---
-visible: false
+visible: true
 ---
 <script> 
     import { Image, Video, Pdf } from "$lib/components/evidence"; 
 </script> 
 
-## Project Description
+## Defence
 
-your project description here
+During the Blended Intensive Programme (BIP) in Austria, I was put in a highly dynamic and unfamiliar international environment. This experience required me to rapidly adapt.
 
-## Duration of the Project
+### Adapting to New Situations
+The BIP program brought together students from Romania, Finland, Austria and Belgium who had never worked together before. From day one, I had to adapt to different cultural norms, varying levels of (non-)technical expertise and new working styles. Working in a physical campus environment abroad under tight deadlines forced me to step out of my comfort zone, remain flexible, and establish efficient team collaboration channels quickly.
 
-the project duration here
+### Persuading Others
+When brainstorming our customer support AI solution, the team initially had diverging visions. Some members wanted to focus on deep technical implementation, while others leaned toward a purely business-oriented pitch. I used structured reasoning to persuade the team that a balanced approach—showing a clear UX flow of the AI assisting human agents—would make the most impact on the jury. By communicating the "why" behind my proposals, I successfully guided the team toward a unified project direction.
 
-## Accomplished Learning Goals
+### Negotiating Successfully
+In any intense, short-term project, friction regarding task division and project scope is inevitable. During the development phase, we had to negotiate how to divide responsibilities (deck creation, scriptwriting, system flow design) based on individual strengths. I actively facilitated these negotiations, ensuring tasks were distributed fairly and that we reached a consensus on the final presentation format. This compromise allowed us to work productively without bottlenecking our progress.
 
-the learning goals here
-
-## Links
-
-<a href="https://github.com/Thomas-More-Digital-Innovation/" target="_blank">link to the project</a>
+### Achieving Results with Stakeholders
+The project culminated in presenting to a jury of lecturers and industry representatives. Communicating with them required presenting our technical ideas in a clear, business-oriented manner. Our ability to collaborate internally and present a cohesive, persuasive argument was reflected in the positive feedback we received from the jury.
 
 ## Files
+<Pdf src="Pitch-deck-BIP.pdf" title="Pitch slides" />
 
-<Image src="image.png" alt="" caption="" /> 
-<Video src="video.mp4" caption="" /> 
-<Pdf src="document.pdf" title="" />
+<div class="grid grid-cols-2 gap-4">
+    <Image src="pitching.jpeg" alt="Pitching presentation" title="Pitching" />
+    <Image src="case-work.png" alt="Working on the case together" title="Working on the case" />
+
+</div>

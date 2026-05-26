@@ -1,0 +1,26 @@
+---
+duration: "1 week"
+startsOpened: false
+---
+<!-- The name of the file must match your project name -->
+<!-- It is recommended to use the json schema to always use the same name -->
+
+<script>
+    import { Image, Video, Pdf } from "$lib/components/evidence";
+</script>
+
+## Project Description
+
+A Blended Intensive Programme (BIP) focused on international collaboration. 
+The project involved working in a highly diverse team with students from Romania, Finland, and Austria to solve a real-world case study 
+and present the solution in a pitch to a jury.
+I worked on a project to innovate in the customer support field, 
+to introduce AI in a way that is not a replacement of humans, but an improvement for the client.
+
+## Duration of the Project
+
+1 week physical mobility combined with a virtual collaboration session.
+
+## Links
+
+<Pdf src="IMC-KREMS-BIP-CERTIFICATE-DAVID-MAAT.pdf" title="Certificate of participation" />

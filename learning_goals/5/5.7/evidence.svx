@@ -1,28 +1,27 @@
 ---
-visible: false
+visible: true
 ---
 <script> 
     import { Image, Video, Pdf } from "$lib/components/evidence"; 
 </script> 
 
-## Project Description
+## Defence
 
-your project description here
+Throughout my studies in Digital Innovation, and particularly during the Blended Intensive Programme (BIP) in Austria, I have actively engaged in international collaborations, class discussions, and research projects that helped me elevate my English communication skills to a professional level.
 
-## Duration of the Project
+### Active Participation in International Discussions
+During the BIP, working with team members from Romania, Finland, and Austria forced me to communicate solely in English. I actively participated in our daily brainstorming sessions, defining our project's scope, and presenting my ideas clearly. Discussing technical concepts like AI integration and user experience design in a multilingual team required me to express myself precisely and check for mutual understanding. This constant dialogue helped build my confidence in using English in a professional, collaborative environment.
 
-the project duration here
+### Research Assignments and Case Work
+In both the BIP and general Digital Innovation coursework, research is a core element. During the BIP, we conducted research on how AI can be ethically and functionally integrated into customer support workflows. We reviewed existing solutions, analyzed market needs, and synthesized our findings into a cohesive proposal. Participating in these research tasks and discussing our findings with peers and coaches allowed me to expand my professional vocabulary and learn how to structure technical research in English.
 
-## Accomplished Learning Goals
-
-the learning goals here
-
-## Links
-
-<a href="https://github.com/Thomas-More-Digital-Innovation/" target="_blank">link to the project</a>
+### Interactive Class Activities
+In the Digital Innovation track, we regularly participate in stand-ups, feedback sessions, and interactive workshops. Whether pitching a concept, negotiating roles in a group project, or participating in classroom discussions, I make it a priority to speak up, ask questions, and share constructive feedback. This active engagement has been instrumental in upgrading my ability to communicate effectively in a modern, international IT work environment.
 
 ## Files
+<Pdf src="Pitch-deck-BIP.pdf" title="Pitch slides" />
 
-<Image src="image.png" alt="" caption="" /> 
-<Video src="video.mp4" caption="" /> 
-<Pdf src="document.pdf" title="" />
+<div class="grid grid-cols-2 gap-4"> 
+    <Image src="pitching.jpeg" alt="Pitching presentation" title="Pitching" />
+    <Image src="case-work.png" alt="Working on the case together" title="Working on the case" />
+</div>

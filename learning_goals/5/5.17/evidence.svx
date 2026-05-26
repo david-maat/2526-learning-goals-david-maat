@@ -1,28 +1,32 @@
 ---
-visible: false
+visible: true
 ---
 <script> 
     import { Image, Video, Pdf } from "$lib/components/evidence"; 
 </script> 
 
-## Project Description
+## Defence
 
-your project description here
+During the Blended Intensive Programme (BIP) in Austria, I collaborated with an international, interdisciplinary team to develop, document, and evaluate an AI-powered customer support solution. This required aligning our IT architecture with the business model and marketing strategies developed by team members from other professional domains.
 
-## Duration of the Project
+### Developing the IT Solution
+- **System Architecture:** The solution used a main AI model that calls tools dynamically to fetch information and resolve customer queries, allowing it to autonomously draft and send responses.
+- **Double-Model and Handover HOTL Integration:** To ensure safety, we integrated a smaller checking model to validate the main model's outputs. We also added input and output blocklists. If any of these safety checks fail three consecutive times, the system triggers an automatic handover to a human support agent.
 
-the project duration here
+### Documenting the Architecture and Workflows
+To explain our solution to both technical and non-technical stakeholders, we produced comprehensive documentation.
+- **Technical Visuals:** I created system architecture diagrams and flowcharts illustrating how user inquiries, database queries, and AI responses interact.
+- **Pitch and Case Documentation:** We compiled our system design, target audience personas, user journeys, and technical structure into a professional pitch deck.
 
-## Accomplished Learning Goals
-
-the learning goals here
-
-## Links
-
-<a href="https://github.com/Thomas-More-Digital-Innovation/" target="_blank">link to the project</a>
+### Evaluating against Business Context and Other Domains
+Working in a team with students from business, marketing, and communication backgrounds required constant alignment.
+- **Business Feasibility:** We evaluated the IT solution's operational costs (e.g., LLM API token usage, hosting) and compared it against the expected reduction in support ticket handling times to calculate the ROI.
+- **Interdisciplinary Alignment:** I ensured the technical feasibility of the product matched the marketing team's promises and the business team's pricing models, creating a cohesive, well-rounded solution.
 
 ## Files
+<Pdf src="Pitch-deck-BIP.pdf" title="Pitch slides" />
 
-<Image src="image.png" alt="" caption="" /> 
-<Video src="video.mp4" caption="" /> 
-<Pdf src="document.pdf" title="" />
+<div class="grid grid-cols-2 gap-4"> 
+    <Image src="pitching.jpeg" alt="Pitching presentation" title="Pitching" />
+    <Image src="case-work.png" alt="Working on the case together" title="Working on the case" />
+</div>

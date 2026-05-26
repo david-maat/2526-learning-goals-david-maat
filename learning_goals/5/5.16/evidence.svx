@@ -1,28 +1,29 @@
 ---
-visible: false
+visible: true
 ---
 <script> 
     import { Image, Video, Pdf } from "$lib/components/evidence"; 
 </script> 
 
-## Project Description
+## Defence
 
-your project description here
+During the Blended Intensive Programme (BIP) in Austria, I participated in an international project where we had to collect data, evaluate potential IT solutions, and formulate recommendations for optimizing customer support services.
 
-## Duration of the Project
+### Collecting and Interpreting Customer Support Data
+Our team analyzed current customer service bottlenecks and agent workloads. We collected and interpreted data regarding response times, common customer complaints, and the repetitive nature of support inquiries. This analysis highlighted that while automation could reduce response times, fully automated systems often lead to lower customer satisfaction due to lack of empathy and incorrect answers.
 
-the project duration here
+### Evaluating IT Solutions in a Business Context
+We examined and evaluated different IT approaches to address these challenges:
+- **Autonomous Human-on-the-Loop (HOTL) AI.** We evaluated a system where the AI uses tools to resolve customer queries and directly sends responses. To manage safety, we designed a double-AI model verification process where a main model processes requests and a smaller checking model validates the response.
+- **Fail-Safe Mechanism:** We implemented input and output blocklists. If any validation or blocklist check fails three consecutive times, the system triggers a human handover, ensuring complex or unsafe issues are handled by a human agent.
 
-## Accomplished Learning Goals
-
-the learning goals here
-
-## Links
-
-<a href="https://github.com/Thomas-More-Digital-Innovation/" target="_blank">link to the project</a>
+### Making Well-Founded Recommendations
+Based on our analysis, we recommended the Human-on-the-Loop (HOTL) model with automated checks and failover mechanisms. We demonstrated how this solution optimizes business efficiency (instantly responding to simple requests using tools) while safeguarding customer trust (preventing brand damage through double-model checking and automated human handover after consecutive validation failures). We presented this recommendation and our system flow design to a jury of experts, detailing both the technical implementation and the business case.
 
 ## Files
+<Pdf src="Pitch-deck-BIP.pdf" title="Pitch slides" />
 
-<Image src="image.png" alt="" caption="" /> 
-<Video src="video.mp4" caption="" /> 
-<Pdf src="document.pdf" title="" />
+<div class="grid grid-cols-2 gap-4"> 
+    <Image src="pitching.jpeg" alt="Pitching presentation" title="Pitching" />
+    <Image src="case-work.png" alt="Working on the case together" title="Working on the case" />
+</div>

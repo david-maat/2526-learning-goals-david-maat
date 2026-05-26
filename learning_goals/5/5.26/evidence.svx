@@ -1,28 +1,31 @@
 ---
-visible: false
+visible: true
 ---
 <script> 
     import { Image, Video, Pdf } from "$lib/components/evidence"; 
 </script> 
 
-## Project Description
+## Defence
 
-your project description here
+During the Blended Intensive Programme (BIP), I participated in an intensive international collaboration project that directly aligned with this goal. I worked in a highly diverse team with students from Romania, Finland, and Austria, which presented both a rewarding challenge and an opportunity to adapt my communication style across cultural and linguistic boundaries.
 
-## Duration of the Project
+### Collaboration and Cultural Diversity
+Our team consisted of individuals with different academic backgrounds, experiences, and native languages. We participated in both virtual collaboration sessions and a week of physical mobility. To coordinate effectively, we had to establish clear communication protocols, ensure active listening, and bridge cultural gaps to keep everyone aligned. I actively contributed to brainstorming sessions, ensuring all team members' voices were heard and that we leveraged our diverse perspectives to develop a comprehensive solution.
 
-the project duration here
+### Solving the Real-World Problem
+Our challenge was to innovate within the customer support sector. We designed a solution to integrate AI in a way that assists and empowers customer support agents rather than replacing them, optimizing the overall client experience. This required structured discussions to define the scope, design the system flow, and justify our choices from both a technological and business perspective.
 
-## Accomplished Learning Goals
+### Competing in the Pitch Competition
+The project culminated in a pitch competition where we presented our solution to a jury of industry professionals. I collaborated on drafting, structuring, and refining our pitch deck to ensure a clear and compelling narrative. We divided the presentation duties dynamically to highlight each member's strengths. Presenting to the jury and competing against other talented international teams was a fun and exciting communication challenge that pushed us to synthesize complex technical ideas into an engaging, professional pitch. 
 
-the learning goals here
-
-## Links
-
-<a href="https://github.com/Thomas-More-Digital-Innovation/" target="_blank">link to the project</a>
+Through this experience, I sharpened my public speaking, team negotiation, and intercultural communication skills while building connections with peers across Europe.
 
 ## Files
+<Pdf src="Pitch-deck-BIP.pdf" title="Pitch slides" />
 
-<Image src="image.png" alt="" caption="" /> 
-<Video src="video.mp4" caption="" /> 
-<Pdf src="document.pdf" title="" />
+<div class="grid grid-cols-2 gap-4"> 
+    
+    <Image src="pitching.jpeg" alt=" Pitching presentation" title="Pitching" />
+    <Image src="case-work.png" alt="Working on the case together" title="Working on the case" />
+
+</div>
