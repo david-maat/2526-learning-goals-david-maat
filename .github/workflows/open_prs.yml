@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - main
-      - pr-for-lecturers
-      - feat/pr-for-lecturers
   workflow_dispatch:
 
 permissions:
