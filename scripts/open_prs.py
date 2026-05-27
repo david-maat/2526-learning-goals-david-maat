@@ -99,15 +99,16 @@ def main():
     target_default_branch = info.get("defaultBranchRef", {}).get("name", "main")
     print(f"Target PR repository (fork): {target_repo} (branch: {target_default_branch})")
 
-    # 3. Configure Git remote for upstream if it doesn't exist
+    # 3. Configure Git remote for upstream if it doesn't exist, and fetch target/upstream branches
     if not dry_run:
         remotes = run_cmd(["git", "remote"]).stdout.split()
         if "upstream" not in remotes:
             run_cmd(["git", "remote", "add", "upstream", f"https://github.com/{parent_repo}.git"])
         
         run_cmd(["git", "fetch", "upstream", parent_default_branch])
+        run_cmd(["git", "fetch", "origin", target_default_branch])
     else:
-        print(f"[Dry Run] Would configure remote 'upstream' and fetch from {parent_repo}")
+        print(f"[Dry Run] Would configure remote 'upstream' and fetch from {parent_repo} and origin")
 
     # 4. Configure Git user details if not set
     if not dry_run:
@@ -182,8 +183,8 @@ def main():
             print(f"[Dry Run] Would isolate folder: {goal_dir}")
             continue
 
-        # Recreate local branch starting from upstream default branch
-        run_cmd(["git", "checkout", "-B", branch_name, f"upstream/{parent_default_branch}"])
+        # Recreate local branch starting from target default branch (fork's default branch, e.g. origin/main)
+        run_cmd(["git", "checkout", "-B", branch_name, f"origin/{target_default_branch}"])
 
         # Checkout the goal directory from current commit
         checkout_res = subprocess.run([
@@ -196,10 +197,10 @@ def main():
             run_cmd(["git", "checkout", current_commit])
             continue
 
-        # Check if there are changes compared to upstream
+        # Check if there are changes compared to target default branch
         status_res = run_cmd(["git", "status", "--porcelain"])
         if not status_res.stdout.strip():
-            print(f"No changes detected for Goal {goal_num} compared to upstream/{parent_default_branch}.")
+            print(f"No changes detected for Goal {goal_num} compared to origin/{target_default_branch}.")
             run_cmd(["git", "checkout", current_commit])
             continue
 
