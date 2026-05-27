@@ -197,6 +197,32 @@ def main():
             run_cmd(["git", "checkout", current_commit])
             continue
 
+        # Modify goal.json status from "Done" to "Verified" on the PR branch
+        goal_json_path = os.path.join(goal_dir, "goal.json")
+        if os.path.exists(goal_json_path):
+            try:
+                with open(goal_json_path, 'r', encoding='utf-8') as f:
+                    content = f.read()
+                
+                import re
+                new_content, count = re.subn(r'("status"\s*:\s*)"Done"', r'\1"Verified"', content)
+                if count == 0:
+                    new_content, count = re.subn(r"('status'\s*:\s*)'Done'", r"\1'Verified'", content)
+                
+                if count > 0:
+                    with open(goal_json_path, 'w', encoding='utf-8') as f:
+                        f.write(new_content)
+                else:
+                    # Fallback to parsing and writing JSON if regex fails
+                    with open(goal_json_path, 'r', encoding='utf-8') as f:
+                        data = json.load(f)
+                    if data.get("status") == "Done":
+                        data["status"] = "Verified"
+                        with open(goal_json_path, 'w', encoding='utf-8') as f:
+                            json.dump(data, f, indent=4)
+            except Exception as e:
+                print(f"Warning: Could not update status to Verified in {goal_json_path}: {e}")
+
         # Check if there are changes compared to target default branch
         status_res = run_cmd(["git", "status", "--porcelain"])
         if not status_res.stdout.strip():
