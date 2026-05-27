@@ -94,6 +94,11 @@ def main():
 
     print(f"Upstream target repo: {parent_repo} (branch: {parent_default_branch})")
 
+    # Target repository and default branch where PRs should actually be opened (the fork itself)
+    target_repo = f"{owner}/{repo_name}"
+    target_default_branch = info.get("defaultBranchRef", {}).get("name", "main")
+    print(f"Target PR repository (fork): {target_repo} (branch: {target_default_branch})")
+
     # 3. Configure Git remote for upstream if it doesn't exist
     if not dry_run:
         remotes = run_cmd(["git", "remote"]).stdout.split()
@@ -153,8 +158,8 @@ def main():
         # Check if PR exists
         pr_res = run_cmd([
             "gh", "pr", "list",
-            "--repo", parent_repo,
-            "--head", f"{owner}:{branch_name}",
+            "--repo", target_repo,
+            "--head", branch_name,
             "--state", "all",
             "--json", "state,number"
         ])
@@ -209,15 +214,24 @@ def main():
         # Create/Update PR
         if action == "create":
             print(f"Creating PR for Goal {goal_num}...")
-            run_cmd([
-                "gh", "pr", "create",
-                "--repo", parent_repo,
-                "--base", parent_default_branch,
-                "--head", f"{owner}:{branch_name}",
-                "--title", f"Goal {goal_num}: {goal_title}",
-                "--body", f"Pull Request automatically opened for Learning Goal {goal_num}.\n\nContains evidence and status update for this goal."
-            ])
-            print(f"PR successfully created!")
+            try:
+                run_cmd([
+                    "gh", "pr", "create",
+                    "--repo", target_repo,
+                    "--base", target_default_branch,
+                    "--head", branch_name,
+                    "--title", f"Goal {goal_num}: {goal_title}",
+                    "--body", f"Pull Request automatically opened for Learning Goal {goal_num}.\n\nContains evidence and status update for this goal."
+                ])
+                print(f"PR successfully created!")
+            except subprocess.CalledProcessError as e:
+                if os.environ.get("GITHUB_ACTIONS") == "true":
+                    print("\n" + "!" * 80)
+                    print("ERROR: Failed to create Pull Request on the fork repository.")
+                    print("Please ensure that the GITHUB_TOKEN has write access and 'Allow GitHub Actions")
+                    print("to create and approve pull requests' is enabled in your repository settings.")
+                    print("!" * 80 + "\n")
+                raise e
         else:
             print(f"Branch updated successfully. PR #{pr_number} is updated.")
 
