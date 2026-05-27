@@ -7,14 +7,41 @@ visible: true
 
 ## Explanation
 
-For the JC WASM project I worked with GO to serve an api that commucates with a database. 
-For the employment interest tool I implemented server side events to build an interactive expierience for the client.
-For the UA arcade cabinet I implemented an API that serves game files with dynamic replacement of assets to allow replacing the original game assets with custom ones. 
-This was implemented in FastAPI (python)
+I have demonstrated mastery of server-side programming principles across multiple languages (Python, Go, and PHP) and web architectures:
+
+### 1. Python & FastAPI (UA Arcade Cabinet)
+For the UA Arcade Cabinet project, I developed an API that serves HTML5 game packages and handles dynamic asset replacement on-the-fly. The backend is built with FastAPI. In [game.py](https://github.com/Thomas-More-Digital-Innovation/2526-UAnt-007-Arcade-cabinet/blob/main/code/backend/src/game/game.py), the `serve_game_file` route intercepts game asset requests, checks if a custom override exists in the database, and dynamically streams the custom asset using FastAPI's `StreamingResponse` instead of the original resource.
+
+### 2. Go & Bun ORM (JC Backend WASM)
+For the JC Backend WASM project, I implemented a REST API in Go using the Gin web framework and Bun ORM to connect to a PostgreSQL database. In [main.go](https://github.com/Thomas-More-Digital-Innovation/2526-JC-002-Backend-WASM/blob/main/code/api/main.go), I structured the database connection lifecycle, ran migrations automatically on startup, parsed incoming JSON payloads, and executed database transactions (such as upserting statuses and creating new Todo records).
+
+### 3. PHP & Laravel (Employment Interest Tool)
+For the Employment Interest Tool, I implemented the server-side test resuming logic. In [Test.php](https://github.com/Thomas-More-Digital-Innovation/2526-MPI-001-Employment-Interest-Tool/blob/main/code/app/Livewire/Test/Test.php), the component checks if an active test attempt exists in the session. If so, it query-joins the answers and questions tables to find the last answered question and automatically resumes from the next question:
+
+```php
+// Find the last answered question to resume from the next one
+$lastAnswer = Answer::join('question', 'answer.question_id', '=', 'question.question_id')
+    ->where('answer.test_attempt_id', $this->testAttemptId)
+    ->orderBy('question.question_number', 'desc')
+    ->first();
+if ($lastAnswer) {
+    // Resume from the next question after the last answered one
+    $this->questionNumber = $lastAnswer->question_number + 1;
+    
+    // If we've answered all questions, go to the last one
+    if ($this->questionNumber > $this->totalQuestions) {
+        $this->questionNumber = $this->totalQuestions;
+    }
+} else {
+    // No answers yet, start from question 1
+    $this->questionNumber = 1;
+}
+```
+
+---
 
 ## Links
 
-<a href="https://github.com/Thomas-More-Digital-Innovation/2526-JC-002-Backend-WASM" target="_blank">JC-WASM Repository</a><br />
-<a href="https://github.com/Thomas-More-Digital-Innovation/2526-MPI-001-Employment-Interest-Tool" target="_blank">Employment Interest Tool Repository</a><br />
-<a href="https://github.com/Thomas-More-Digital-Innovation/2526-UAnt-007-Arcade-cabinet" target="_blank">UA Arcade Cabinet Repository</a><br />
-
+- <a href="https://github.com/Thomas-More-Digital-Innovation/2526-UAnt-007-Arcade-cabinet" target="_blank">UA Arcade Cabinet Repository</a>
+- <a href="https://github.com/Thomas-More-Digital-Innovation/2526-JC-002-Backend-WASM" target="_blank">JC-WASM Repository</a>
+- <a href="https://github.com/Thomas-More-Digital-Innovation/2526-MPI-001-Employment-Interest-Tool" target="_blank">Employment Interest Tool Repository</a>
