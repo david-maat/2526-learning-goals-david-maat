@@ -7,7 +7,96 @@ visible: true
 
 ## Explanation
 
-For the arcade cabinet I worked with sqlalchemy as an ORM, for the repaircafe I used prisma.
+I implemented efficient and secure data persistence using two different Object-Relational Mapping (ORM) tools depending on the project stack: **SQLAlchemy** (Python) for the UA Arcade Cabinet project and **Prisma ORM** (TypeScript/PostgreSQL) for the RepairCafé Ticketing System.
+
+---
+
+### 1. Python & SQLAlchemy (UA Arcade Cabinet)
+
+For the backend of the UA Arcade Cabinet, I used SQLAlchemy to model games and dynamic asset overrides.
+
+#### Model Definitions
+We defined structured relationships between games, uploaded packages (`ZipUpload`), and custom asset replacements:
+
+```python
+class Game(Base):
+    __tablename__ = 'game'
+    id: Mapped[UUID] = mapped_column(primary_key=True, default=uuid4)
+    name: Mapped[str] = mapped_column(String(120))
+    description: Mapped[Optional[str]] = mapped_column(String(2000), nullable=True)
+    is_active: Mapped[bool] = mapped_column(default=True)
+    zip_uploads: Mapped[list['ZipUpload']] = relationship(back_populates='game')
+    assets: Mapped[list['Asset']] = relationship(back_populates='game')
+```
+*   **Link**: [database.py](https://github.com/Thomas-More-Digital-Innovation/2526-UAnt-007-Arcade-cabinet/blob/main/code/backend/src/database/database.py#L47-L61)
+
+#### Database Operations
+To execute safe queries, I injected the database session as a dependency in FastAPI routers and used standard session operations:
+
+```python
+@router.post('/', dependencies=[Depends(get_api_key)])
+def create_game(request: GameCreateRequest, db: Session = Depends(database.get_session)):
+    new_game = database.Game(
+        name=request.name,
+        description=request.description,
+        is_active=request.is_active
+    )
+    db.add(new_game)
+    db.commit()
+```
+*   **Link**: [game.py (Create Game Router)](https://github.com/Thomas-More-Digital-Innovation/2526-UAnt-007-Arcade-cabinet/blob/main/code/backend/src/game/game.py#L59-L79)
+
+---
+
+### 2. TypeScript & Prisma ORM (RepairCafé Ticketing System)
+
+For the RepairCafé Ticketing System, I integrated a relational schema using **Prisma** targeting a PostgreSQL database.
+
+#### Schema definition with Relations
+Relationships like the foreign-key associations between clients (`Klant`) and registered repair items (`Voorwerp`):
+
+```prisma
+model Klant {
+  klantId       Int       @id @default(autoincrement())
+  klantTypeId   Int
+  klantnaam     String
+  telNummer     String?
+  klantType     KlantType @relation(fields: [klantTypeId], references: [klantTypeId])
+  voorwerpen    Voorwerp[]
+}
+
+model Voorwerp {
+  voorwerpId           Int                  @id @default(autoincrement())
+  volgnummer           String               @unique
+  klantId              Int
+  aanmeldingsDatum     DateTime
+  voorwerpStatusId     Int
+  voorwerpStatus       VoorwerpStatus       @relation(fields: [voorwerpStatusId], references: [voorwerpStatusId])
+  klant                Klant                @relation(fields: [klantId], references: [klantId])
+}
+```
+*   **Link**: [schema.prisma](https://github.com/Thomas-More-Digital-Innovation/2526-TMEM-001-Ticketing-system-for-repair-cafe/blob/main/code/rc-app/prisma/schema.prisma#L81-L114)
+
+#### Nested Inserts & Queries
+Prisma enables secure transactional writes (like binding a newly created repair item to its corresponding client and status) inside Next.js Server Actions:
+
+```typescript
+const created = await prisma.voorwerp.create({
+  data: {
+    volgnummer,
+    klantId: klant.klantId,
+    aanmeldingsDatum: now,
+    aanmeldingsTijd: now,
+    voorwerpStatusId: geregistreerdStatus.voorwerpStatusId,
+    afdelingId: afdelingId,
+    voorwerpBeschrijving: data.itemDescription,
+    klachtBeschrijving: data.problemDescription,
+  },
+})
+```
+*   **Link**: [voorwerpen.ts (Server Actions)](https://github.com/Thomas-More-Digital-Innovation/2526-TMEM-001-Ticketing-system-for-repair-cafe/blob/main/code/rc-app/lib/actions/voorwerpen.ts#L218-L229)
+
+---
 
 ## Links
 

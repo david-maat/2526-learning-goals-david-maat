@@ -13,7 +13,9 @@ We made sure to guide the user in right direction of the normal flow.
 
 ## Links
 
-<a href="https://github.com/Thomas-More-Digital-Innovation/2526-DI-034-DI4D-Portal" target="_blank">link to the project</a>
+<a href="https://github.com/Thomas-More-Digital-Innovation/2526-DI-034-DI4D-Portal" target="_blank">link to the project</a><br />
+<a href="https://www.figma.com/files/team/1570418291606593251/project/496722806?fuid=1552228711612548536" target="_blank">link to the figma files</a>
+
 
 ## Figma screenshot
 

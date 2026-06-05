@@ -6,9 +6,27 @@ visible: true
 </script> 
 
 ## Explanation
+For the **RepairCafé Ticketing System**, I built an interactive, component-based user interface using **Next.js** and **React** styled with **Tailwind CSS**. The application features reusable custom components designed to facilitate smooth workflows, manage internal state, react to native browser API events, and implement proper cleanup logic on component unmounting.
 
-For the UA arcade cabinet I made a frontend in Vua.js with the Quasar component framework. This frontend is used to interact with the API I implemented in FastAPI (python) that serves game files with dynamic replacement of assets to allow replacing the original game assets with custom ones.
+### Key Interactive Components
+
+#### 1. Reusable Dropdown Component (`Dropdown.tsx`)
+A custom dropdown input designed from scratch to offer a consistent select experience across forms.
+*   **State Management**: Manages state for whether the dropdown is open (`isOpen`) and the currently selected value (`selectedValue`).
+*   **Outside Click Detection**: To improve user experience, it listens to the document's `mousedown` event to automatically close the dropdown if the user clicks outside. The event listener is registered dynamically only when the dropdown is open and is cleanly removed on unmount.
+*   **Code Reference**: [Dropdown.tsx](https://github.com/Thomas-More-Digital-Innovation/2526-TMEM-001-Ticketing-system-for-repair-cafe/blob/main/code/rc-app/app/components/Dropdown.tsx)
+
+#### 2. Interactive Camera-Based QR Scanner (`QRScanner.tsx`)
+This component allows students and admins to quickly scan ticket QR codes to check/update status.
+*   **API Interaction & Permissions**: Interacts with the browser's `navigator.mediaDevices.getUserMedia` API to request camera access. It handles states such as `checking`, `granted`, or `denied` with appropriate user-facing prompts.
+*   **Resource Management & Cleanup**: Crucially, it tracks mounting lifecycle and stops camera media tracks immediately when the scanner is closed or unmounted to prevent memory leaks and keep camera access indicators active.
+*   **Code Reference**: [QRScanner.tsx](https://github.com/Thomas-More-Digital-Innovation/2526-TMEM-001-Ticketing-system-for-repair-cafe/blob/main/code/rc-app/app/components/QRScanner.tsx)
+
+#### 3. Composite Modals (e.g., `GebruikerEditModal.tsx`)
+Form components composed of multiple custom sub-components (`EditModal`, `Input`, `Dropdown`) to handle state mutations.
+*   **Form Validation**: Maintains state for multiple fields (name, type, username, password) and performs client-side field validation before submitting data to Next.js Server Actions.
+*   **Code Reference**: [GebruikerEditModal.tsx](https://github.com/Thomas-More-Digital-Innovation/2526-TMEM-001-Ticketing-system-for-repair-cafe/blob/main/code/rc-app/app/components/modals/GebruikerEditModal.tsx)
 
 ## Links
 
-<a href="https://github.com/Thomas-More-Digital-Innovation/2526-UAnt-007-Arcade-cabinet" target="_blank">link to the repository</a>
+<a href="https://github.com/Thomas-More-Digital-Innovation/2526-TMEM-001-Ticketing-system-for-repair-cafe" target="_blank">link to the repository</a>

@@ -1,0 +1,17 @@
+---
+duration: "1 week"
+startsOpened: false
+---
+<!-- The name of the file must match your project name -->
+<!-- It is recommended to use the json schema to always use the same name -->
+
+<script>
+    import { Image, Video, Pdf } from "$lib/components/evidence";
+</script>
+
+## Description
+
+React & .NET API Development is a course where students learn to build full-stack applications using React for the frontend and .NET for the backend. It covers developing dynamic web applications, setting up RESTful APIs, and connecting frontend and backend for efficient data exchange. Students gain hands-on experience with modern tools and best practices to create scalable and maintainable applications.
+
+## Links
+

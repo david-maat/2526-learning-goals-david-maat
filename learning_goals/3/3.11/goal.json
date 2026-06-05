@@ -1,10 +1,10 @@
 {
     "$schema": "../../../src/lib/learningGoalsSchema.jsonc",
-    "number": "3.11",
-    "title": "You develop and present your design in a way that is easily transferable to stakeholders (including developers), with attention to the application of a design system.",
+    "number": "3.10",
+    "title": "You use Figma to design visually appealing and accessible prototypes based on user flow and UI principles such as hierarchy, contrast, and consistency.",
     "track": [
         "APP"
     ],
-    "status": "Todo",
-    "project": []
+    "status": "Done",
+    "project": ["2526-DI-034-DI4D-Portal"]
 }

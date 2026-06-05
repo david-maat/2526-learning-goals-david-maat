@@ -7,8 +7,46 @@ visible: true
 
 ## Explanation
 
-For the ticketing system I implemented a live state system using websockets to allow the client to see live updates for the status of their item, the state is pushed based on any changes to the database, so it's always correct.
+For the **RepairCafé Ticketing System**, I implemented a fully reactive live dashboard to display real-time repair status updates to clients waiting at the café. This system demonstrates advanced management of **client-side state**, **user interactions**, and **asynchronous data pipelines** using **React (Next.js)** and **Socket.IO**.
+
+### 1. Asynchronous Data & Real-Time Synchronization
+
+The client application maintains live synchronization with the server using a combination of initial HTTP polling and asynchronous event-driven WebSockets:
+
+*   **Initial Data Fetch**: When the customer dashboard page (`app/client/page.tsx`) mounts, it initiates an asynchronous HTTP `GET` request to fetch the initial statuses of active repair items from the `/api/voorwerpen/status` API:
+    ```typescript
+    const response = await fetch('/api/voorwerpen/status');
+    const data = await response.json();
+    setItems(normalizeGroupedVoorwerpen(data));
+    ```
+*   **WebSocket Subscriptions**: The client subscribes to real-time events via Socket.IO. When updates occur, the client asynchronously receives the payload and updates its React state, triggering a re-render without reloading the page:
+    ```typescript
+    if (socket) {
+      socket.on('voorwerpen-updated', (data: unknown) => {
+        setItems(normalizeGroupedVoorwerpen(data));
+      });
+      return () => {
+        socket.off('voorwerpen-updated');
+      };
+    }
+    ```
+*   **Server-Side Broadcasting**: On the backend, actions that modify repair item states (such as `updateVoorwerpStatus`, `confirmDelivery`, and `completeVoorwerpWithAdvice` in `lib/actions/voorwerpen.ts`) execute database mutations through Prisma ORM. Upon successful modification, they trigger `broadcastVoorwerpenUpdate()`, which queries the updated database state and emits a `voorwerpen-updated` WebSocket message to all active clients:
+    ```typescript
+    global.io.emit('voorwerpen-updated', grouped);
+    ```
+
+### 2. Client-Side State Management
+
+The dashboard uses React's hooks to control the application's state variables dynamically:
+*   `items`: Holds the current collection of repair items, structured by repair statuses: `afgeleverd` (registered), `inBehandeling` (in progress), and `klaar` (completed).
+*   `isLoading`: Controls the display of a loading screen during the initial page fetch.
+*   `isConnected`: Tracks the current state of the Socket.IO socket client, rendering a persistent visual indicator (`● Live` in green or `● Offline` in red) to give users immediate feedback about the synchronization status.
+
+---
 
 ## Links
 
-<a href="https://github.com/Thomas-More-Digital-Innovation/2526-TMEM-001-Ticketing-system-for-repair-cafe" target="_blank">link to the project</a>
+*   <a href="https://github.com/Thomas-More-Digital-Innovation/2526-TMEM-001-Ticketing-system-for-repair-cafe/blob/main/code/rc-app/app/client/page.tsx" target="_blank">Client-Side Dashboard View (`page.tsx`)</a>
+*   <a href="https://github.com/Thomas-More-Digital-Innovation/2526-TMEM-001-Ticketing-system-for-repair-cafe/blob/main/code/rc-app/lib/socket.ts" target="_blank">Socket.IO Client Hook (`socket.ts`)</a>
+*   <a href="https://github.com/Thomas-More-Digital-Innovation/2526-TMEM-001-Ticketing-system-for-repair-cafe/blob/main/code/rc-app/lib/broadcast.ts" target="_blank">Server Broadcasting Logic (`broadcast.ts`)</a>
+*   <a href="https://github.com/Thomas-More-Digital-Innovation/2526-TMEM-001-Ticketing-system-for-repair-cafe" target="_blank">Main Project Repository</a>
