@@ -5,7 +5,7 @@
     "1.2": "", // You identify and justify non-functional requirements for your project based on the ISO25010 quality model, ensuring that reliability and security are explicitly addressed.
     "1.3": "", // You research and compare various software solutions and substantiate your best choice with strong arguments by using the Weighted Decision Matrix technique or an equivalent.
     "1.4": "", // You apply the principles of object-oriented modelling to create accurate and well-structured class and sequence diagrams that effectively represent system components, their relationships, and interactions.
-    "1.5": "", // You cleverly deploy GRASP patterns to make your designs next-level.
+    "1.5": "Your name here", // You cleverly deploy GRASP patterns to make your designs next-level.
     "1.6": "", // You identify the functional and non-functional requirements based on a defined software assignment formulated by an internal client unfamiliar with IT
     "1.7": "", // You dissect stated requirements and choose the most appropriate technologies to meet those requirements
     "1.8": "", // You research and compare various solutions and substantiate your best choice with strong arguments by using the Weighted Decision Matrix technique or an equivalent.
