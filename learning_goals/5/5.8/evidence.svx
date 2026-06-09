@@ -1,28 +1,15 @@
 ---
-visible: false
+visible: true
 ---
 <script> 
     import { Image, Video, Pdf } from "$lib/components/evidence"; 
 </script> 
 
-## Project Description
+## Evidence
 
-your project description here
-
-## Duration of the Project
-
-the project duration here
-
-## Accomplished Learning Goals
-
-the learning goals here
-
-## Links
-
-<a href="https://github.com/Thomas-More-Digital-Innovation/" target="_blank">link to the project</a>
+During the project I had weekly meetings with Jonas to discuss the progress of the project. 
+I delivered my research findings in an article style document that is easy to follow. All steps taken to achieve the end result are in the document.
 
 ## Files
 
-<Image src="image.png" alt="" caption="" /> 
-<Video src="video.mp4" caption="" /> 
-<Pdf src="document.pdf" title="" />
+<a href="https://github.com/Thomas-More-Digital-Innovation/2526-JC-002-Backend-WASM/blob/main/Documentation.md" target="_blank">Documentation</a>

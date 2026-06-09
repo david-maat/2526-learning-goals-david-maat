@@ -5,24 +5,6 @@ visible: false
     import { Image, Video, Pdf } from "$lib/components/evidence"; 
 </script> 
 
-## Project Description
+## Evidence
 
-your project description here
-
-## Duration of the Project
-
-the project duration here
-
-## Accomplished Learning Goals
-
-the learning goals here
-
-## Links
-
-<a href="https://github.com/Thomas-More-Digital-Innovation/" target="_blank">link to the project</a>
-
-## Files
-
-<Image src="image.png" alt="" caption="" /> 
-<Video src="video.mp4" caption="" /> 
-<Pdf src="document.pdf" title="" />
+During SKIL2 I presented my portfolio to a jury of lecturers. 
