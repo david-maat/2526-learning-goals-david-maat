@@ -4,3 +4,16 @@ visible: true
 <script> 
     import { Image, Video, Pdf } from "$lib/components/evidence"; 
 </script> 
+
+Stijn Rombouts and I organized two workshops for DI4D to help them pass their exams, we went in depth into data modeling and MySQL in order to be able to answer any questions from the students during our workshops.
+
+Presentations:
+<Image src="presentation1.png" alt="presentation1" />
+<Image src="presentation2.png" alt="presentation2" />
+
+Feedback form:
+<Image src="feedback-form-1.png" alt="" />
+<Image src="feedback-form-2.png" alt="" />
+<Image src="feedback-form-3.png" alt="" />
+<Image src="feedback-form-4.png" alt="" />
+<Image src="feedback-form-5.png" alt="" />
