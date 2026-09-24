@@ -1,5 +1,5 @@
 ---
-visible: false
+visible: true
 ---
 <script> 
     import { Image, Video, Pdf } from "$lib/components/evidence"; 
