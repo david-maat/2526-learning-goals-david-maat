@@ -12,6 +12,11 @@ This makes it easy to scale the different components independently according to 
 The file browser uses the S3 API so the webserver doesn't need to have direct local filesystem access, 
 improving the scalability of the application.
 
+A diagram of the scalable architecture:
+<Image src="diagram.png" alt="diagram" />
+A photo of the deployed pods:
+<Image src="image.png" />
+
 ## Links
 
 <a href="https://github.com/Thomas-More-Digital-Innovation/2526-DI-034-DI4D-Portal" target="_blank">link to the project</a>
