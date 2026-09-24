@@ -5,7 +5,8 @@ visible: true
     import { Image, Video, Pdf } from "$lib/components/evidence"; 
 </script> 
 
-I acomplished this in the SKIL2 course
+I acomplished this in the SKIL2 course.
+My portfolio can be found on [davidmaat.be](https://davidmaat.be)
 
 ## Files
 
