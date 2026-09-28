@@ -37,7 +37,7 @@
     //
     // Web
     "3.1": "", // You add client-side interactivity to web pages using a (lightweight) JavaScript framework.
-    "3.2": "", // You design and implement a user-friendly, responsive interface using a modern utility-first CSS framework.
+    "3.2": "Your name here", // You design and implement a user-friendly, responsive interface using a modern utility-first CSS framework.
     "3.3": "", // You develop a full-stack web application using a cohesive technology stack that integrates front-end, back-end, and database layers.
     "3.4": "", // You build a CRUD application that follows the MVC design pattern within a web framework.
     "3.5": "", // You master the basic principles of server-side programming.
