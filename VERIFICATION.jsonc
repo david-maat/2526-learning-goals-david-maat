@@ -180,7 +180,7 @@
     "10.7": "", // You debug existing code and apply refactoring techniques to improve maintainability, performance, and readability.
     "10.8": "", // You apply microservice and distributed system principles to design, develop, and validate modular, scalable enterprise solutions.
     "10.9": "", // You apply data access and architectural patterns that enhance testability, scalability, and robustness of enterprise applications.
-    "10.10": "", // You create a design based on the identified requirements
+    "10.10": "Your name here", // You create a design based on the identified requirements
     "10.11": "", // You build a proof of concept, based on the design, that meets the client's expectations
     "10.12": "", // You build a proof of concept according to the imposed best practices and technical specifications
     "10.13": "", // You develop a cross-platform mobile application in accordance with platform-specific design guidelines and best practices.
