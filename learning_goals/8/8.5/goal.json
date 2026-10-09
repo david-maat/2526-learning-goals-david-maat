@@ -1,5 +1,5 @@
 {
-    "$schema": "../../../../src/lib/learningGoalsSchema.jsonc",
+    "$schema": "../../../src/lib/learningGoalsSchema.jsonc",
     "number": "8.5",
     "title": "You optimize and scale web server stacks.",
     "track": [
