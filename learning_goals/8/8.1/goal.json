@@ -1,10 +1,10 @@
 {
-    "$schema": "../../../src/lib/learningGoalsSchema.jsonc",
+    "$schema": "../../../../src/lib/learningGoalsSchema.jsonc",
     "number": "8.1",
     "title": "You implement and manage container orchestration systems.",
     "track": [
         "CCS"
     ],
-    "status": "",
-    "project": []
+    "status": "Done",
+    "project": ["OPO 2CCS Linux Web Services"]
 }

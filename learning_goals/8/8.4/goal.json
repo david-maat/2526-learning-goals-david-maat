@@ -1,10 +1,10 @@
 {
-    "$schema": "../../../src/lib/learningGoalsSchema.jsonc",
+    "$schema": "../../../../src/lib/learningGoalsSchema.jsonc",
     "number": "8.4",
     "title": "You install and configure various Web server stacks on a Linux environment.",
     "track": [
         "CCS"
     ],
-    "status": "",
-    "project": []
+    "status": "Done",
+    "project": ["OPO 2CCS Linux Web Services"]
 }

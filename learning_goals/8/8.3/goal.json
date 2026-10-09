@@ -1,10 +1,10 @@
 {
-    "$schema": "../../../src/lib/learningGoalsSchema.jsonc",
+    "$schema": "../../../../src/lib/learningGoalsSchema.jsonc",
     "number": "8.3",
     "title": "You automate system administration tasks with Linux service management.",
     "track": [
         "CCS"
     ],
-    "status": "",
-    "project": []
+    "status": "Done",
+    "project": ["OPO 2CCS Linux Web Services"]
 }
