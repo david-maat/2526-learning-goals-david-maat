@@ -126,7 +126,7 @@
     "7.9": "", // You implement a designed dimensional data model (star scheme) by developing and executing  ETL or ELT steps that transform and load data into a target data warehouse.
     //
     // Devops
-    "8.1": "", // You implement and manage container orchestration systems.
+    "8.1": "Your name here", // You implement and manage container orchestration systems.
     "8.2": "", // You know and configure network settings on a Linux system.
     "8.3": "", // You automate system administration tasks with Linux service management.
     "8.4": "", // You install and configure various Web server stacks on a Linux environment.
