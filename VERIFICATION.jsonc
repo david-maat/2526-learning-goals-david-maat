@@ -130,7 +130,7 @@
     "8.2": "", // You know and configure network settings on a Linux system.
     "8.3": "", // You automate system administration tasks with Linux service management.
     "8.4": "", // You install and configure various Web server stacks on a Linux environment.
-    "8.5": "", // You optimize and scale web server stacks.
+    "8.5": "Your name here", // You optimize and scale web server stacks.
     "8.6": "", // You work with containers to package and distribute applications.
     "8.7": "", // You build a proof of concept, based on the design, that meets the client's expectations
     "8.8": "", // You create an infrastructure design that integrates the technologies into a working solution
