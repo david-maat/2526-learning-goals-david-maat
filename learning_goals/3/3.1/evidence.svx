@@ -1,28 +1,14 @@
 ---
-visible: false
+visible: true
 ---
 <script> 
     import { Image, Video, Pdf } from "$lib/components/evidence"; 
 </script> 
 
-## Project Description
-
-your project description here
-
-## Duration of the Project
-
-the project duration here
-
-## Accomplished Learning Goals
-
-the learning goals here
+During the SKIL2 and MPI project we used the TALL-stack, which includes Alpine.js for client-side interactivity.
+Escpecially in the MPI project I worked a lot with it to make the client-side interactivity for the test part of the application.
 
 ## Links
 
 <a href="https://github.com/Thomas-More-Digital-Innovation/" target="_blank">link to the project</a>
 
-## Files
-
-<Image src="image.png" alt="" caption="" /> 
-<Video src="video.mp4" caption="" /> 
-<Pdf src="document.pdf" title="" />

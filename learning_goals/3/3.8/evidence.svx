@@ -1,5 +1,5 @@
 ---
-visible: false
+visible: true
 ---
 <script> 
     import { Image, Video, Pdf } from "$lib/components/evidence"; 
@@ -7,22 +7,4 @@ visible: false
 
 ## Project Description
 
-your project description here
-
-## Duration of the Project
-
-the project duration here
-
-## Accomplished Learning Goals
-
-the learning goals here
-
-## Links
-
-<a href="https://github.com/Thomas-More-Digital-Innovation/" target="_blank">link to the project</a>
-
-## Files
-
-<Image src="image.png" alt="" caption="" /> 
-<Video src="video.mp4" caption="" /> 
-<Pdf src="document.pdf" title="" />
+This was accomplished during the React & .NET Development course.
