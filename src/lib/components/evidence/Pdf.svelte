@@ -25,12 +25,12 @@
         let path = src;
 
         // Try project context first
-        if (projectContext && !src.includes("/") && !src.includes("\\")) {
+        if (projectContext && !src.startsWith("/") && !src.startsWith("\\")) {
             const resolved = resolveProjectAssetPath(src);
             if (resolved) {
                 path = resolved;
             }
-        } else if (context && !src.includes("/") && !src.includes("\\")) {
+        } else if (context && !src.startsWith("/") && !src.startsWith("\\")) {
             // Fallback to evidence context
             const resolved = resolveAssetPath(
                 context.categoryNumber,
