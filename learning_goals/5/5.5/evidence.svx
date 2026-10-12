@@ -17,9 +17,3 @@ This data can then be used to provide more accurate advice to farmers in th area
 ## Links
 
 <a href="https://github.com/david-maat/MORE-PROFESSIONAL-WEEK" target="_blank">link to the project</a>
-
-## Files
-
-<Image src="image.png" alt="" caption="" /> 
-<Video src="video.mp4" caption="" /> 
-<Pdf src="document.pdf" title="" />

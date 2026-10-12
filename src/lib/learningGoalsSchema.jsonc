@@ -51,6 +51,7 @@
                     "OPO 3APP RZL",
                     "OPO 2CCS Linux Web Services",
                     "OPO 3APP Software Engineering",
+                    "OPO 3APP Portfolio & Internship",
                     "BIP",
                     "More professional week",
                     // DI related
@@ -64,7 +65,8 @@
                     "2526-DI0-035-Frank-the-speaking-bench",
                     "2526-DI-034-DI4D-Portal",
                     "2526-UAnt-007-Arcade-cabinet",
-                    "2526-JC-Backend-WASM"
+                    "2526-JC-Backend-WASM",
+                    "DOCK"
                 ]
             }
         }

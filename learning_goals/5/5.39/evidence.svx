@@ -1,28 +1,15 @@
 ---
-visible: false
+visible: true
 ---
 <script> 
     import { Image, Video, Pdf } from "$lib/components/evidence"; 
 </script> 
 
-## Project Description
-
-your project description here
-
-## Duration of the Project
-
-the project duration here
-
-## Accomplished Learning Goals
-
-the learning goals here
-
-## Links
-
-<a href="https://github.com/Thomas-More-Digital-Innovation/" target="_blank">link to the project</a>
+Throughout working in DI I have communicated professionally in emails and meetings with clients, in addition to this I am the president of SIN, which requires a lot of communication with students, the school and businesses.
 
 ## Files
 
-<Image src="image.png" alt="" caption="" /> 
-<Video src="video.mp4" caption="" /> 
-<Pdf src="document.pdf" title="" />
+<Image src="mobiliteitsproject.png" alt="" caption="" /> 
+<Image src="olpas.png" alt="" caption="" /> 
+<Image src="sin-vanroey.png" alt="" caption="" /> 
+

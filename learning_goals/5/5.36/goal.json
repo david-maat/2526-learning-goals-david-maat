@@ -1,11 +1,11 @@
 {
-    "$schema": "../../../src/lib/learningGoalsSchema.jsonc",
+    "$schema": "../../../../src/lib/learningGoalsSchema.jsonc",
     "number": "5.36",
     "title": "You document your design in a report",
     "track": [
         "CCS",
         "DI"
     ],
-    "status": "Todo",
-    "project": []
+    "status": "In Progress",
+    "project": ["2526-JC-Backend-WASM"]
 }
