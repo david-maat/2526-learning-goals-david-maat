@@ -126,12 +126,12 @@
     "7.9": "", // You implement a designed dimensional data model (star scheme) by developing and executing  ETL or ELT steps that transform and load data into a target data warehouse.
     //
     // Devops
-    "8.1": "", // You implement and manage container orchestration systems.
-    "8.2": "", // You know and configure network settings on a Linux system.
-    "8.3": "", // You automate system administration tasks with Linux service management.
-    "8.4": "", // You install and configure various Web server stacks on a Linux environment.
-    "8.5": "", // You optimize and scale web server stacks.
-    "8.6": "", // You work with containers to package and distribute applications.
+    "8.1": "Bram Verbruggen", // You implement and manage container orchestration systems.
+    "8.2": "Bram Verbruggen", // You know and configure network settings on a Linux system.
+    "8.3": "Bram Verbruggen", // You automate system administration tasks with Linux service management.
+    "8.4": "Bram Verbruggen", // You install and configure various Web server stacks on a Linux environment.
+    "8.5": "Bram Verbruggen", // You optimize and scale web server stacks.
+    "8.6": "Bram Verbruggen", // You work with containers to package and distribute applications.
     "8.7": "", // You build a proof of concept, based on the design, that meets the client's expectations
     "8.8": "", // You create an infrastructure design that integrates the technologies into a working solution
     "8.9": "", // You build an IT solution based on a design that meets customer expectations and according to system administration best practices
