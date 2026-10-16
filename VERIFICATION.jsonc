@@ -176,7 +176,7 @@
     "10.3": "", // You implement efficient and secure data persistence using ORM or equivalent techniques.
     "10.4": "", // You design and build RESTful APIs using a modern web framework, applying appropriate architectural conventions and documentation standards.
     "10.5": "", // You integrate back-end services with front-end applications through well-structured and secure API connections.
-    "10.6": "", // You write, execute, and maintain unit and integration tests to ensure the correctness and reliability of your code.
+    "10.6": "Your name here", // You write, execute, and maintain unit and integration tests to ensure the correctness and reliability of your code.
     "10.7": "", // You debug existing code and apply refactoring techniques to improve maintainability, performance, and readability.
     "10.8": "", // You apply microservice and distributed system principles to design, develop, and validate modular, scalable enterprise solutions.
     "10.9": "", // You apply data access and architectural patterns that enhance testability, scalability, and robustness of enterprise applications.
